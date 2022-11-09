@@ -1,2 +1,22 @@
 *.class
 *.log
+*.DS_Store
+.cache
+.env
+.idea
+.vscode
+.lib
+dist/*
+target
+.bloop
+.metals
+.bsp
+
+test-reports/
+
+# Added by "pipeline-builder"
+.*-stack.yaml
+.*-k8s*
+.docker*
+.terraform
+.tmp
