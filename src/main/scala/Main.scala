@@ -33,9 +33,13 @@ object Main {
         )
 
         val countNeighbors = neighBoorList.count(item => {
+          /**
+           * Try to access to the cell, if it's a failure I discard the value by returning false,
+           * otherwise I'll return true since it exists a neighbor in given position
+           */
           Try(board(item._1)(item._2)) match {
             case Success(value) => value == 1
-            case Failure(exception) => false
+            case Failure(_) => false
           }
         })
 
